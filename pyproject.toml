@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "fujifilm-firmware-tools"
+version = "0.1.0"
+description = "Offline Fujifilm DAT firmware parsing, XOR deobfuscation and FFLZ decompression"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [
+  {name = "fujifilm-firmware-tools contributors"}
+]
+keywords = ["fujifilm", "firmware", "fflz", "reverse-engineering", "camera"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Environment :: Console",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+  "Topic :: System :: Hardware"
+]
+dependencies = []
+
+[project.urls]
+Homepage = "https://github.com/EnglandLobster/fujifilm-firmware-tools"
+Repository = "https://github.com/EnglandLobster/fujifilm-firmware-tools"
+Issues = "https://github.com/EnglandLobster/fujifilm-firmware-tools/issues"
+
+[project.scripts]
+fujitools = "fujitools.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
